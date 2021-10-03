@@ -1,0 +1,156 @@
+/* ===========================================
+     Base Element Styles
+   =========================================== */
+   
+   * {
+       box-sizing: border-box;
+   }
+
+   body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #505050;
+   }
+
+  
+
+ /* ==========================================
+     Base Layout Styles 
+    ========================================== */
+    
+    /* ---- Navigation ---- */
+      #main-nav {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: stretch;      
+      }
+
+      #main-nav li {
+          font-size: 1.25em;
+          background-color: #d6eafb;
+          padding: 0.5em;
+          margin: 0.25em;
+      }
+
+      #main-nav a {
+          text-decoration: none;
+      }
+
+      .nav a {
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+
+    /* ---- Layout Containers ---- */
+
+      #wrapper {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+      }
+
+      #portfolio {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1; 
+          align-items: center;
+          background-color:#d6eafb;
+      }
+
+      #skills {
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+      }
+
+      #contact {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+      }
+
+
+    /* ---- Page Elements ---- */
+
+    p {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    
+    .name, a {
+        color: black;
+    }
+
+    .name {
+        font-family: 'Satisfy', cursive;
+        color: #16a085;
+    }
+   
+    h2 {
+        margin-top: 3rem;
+        font-variant: small-caps;
+    }
+
+
+    h3 {
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+
+    .section-heading {
+        margin-bottom: 2em;
+    }
+
+    #intro {
+        color: gray;
+    }
+  
+    #intro img {
+        max-width: 70%;
+        margin-top: 1em;
+    }
+    
+    img {
+        width: 90%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .item {
+        margin-bottom: 3rem;
+    }
+
+    #skills-list:last-child {
+        margin-bottom: 3em;
+    }
+
+    .contact-info {
+        color: grey;
+        font-weight: bold;
+        margin-left: 0.5em;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        border-top: 1px solid lightgray;
+        margin: 0 0.5em;
+        color: black;
+    }
+ 
+  /* =========================================
+      Media Queries
+     ========================================= */   
+
+     @media (min-width: 768px) {
+
+     }
+
+     @media (min-width: 1024px) {
+
+     }
