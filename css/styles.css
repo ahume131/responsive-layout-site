@@ -181,7 +181,7 @@
 
         #portfolio-list {
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: row wrap;
             justify-content: space-between;
             max-height: 300vh;
         }
@@ -239,7 +239,9 @@
        }
 
        #portfolio-list {
-           max-height: 100vh;
+           flex-direction: row;
+           flex-wrap: wrap;
+           max-height: 200vh;
        }
 
        .item {
