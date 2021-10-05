@@ -3,7 +3,7 @@
    =========================================== */
    
    * {
-       box-sizing: border-box;
+    box-sizing: border-box;
    }
 
    body {
@@ -12,14 +12,50 @@
     color: #505050;
    }
 
-  
+   p {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        margin-top: 3rem;
+        margin-bottom: 2em;
+        font-variant: small-caps;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        border-top: 1px solid lightgray;
+        margin: 0 0.5em;
+        color: black;
+    }
 
  /* ==========================================
      Base Layout Styles 
     ========================================== */
     
     /* ---- Navigation ---- */
-      #main-nav {
+      nav {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -31,10 +67,6 @@
           background-color: #d6eafb;
           padding: 0.5em;
           margin: 0.25em;
-      }
-
-      #main-nav a {
-          text-decoration: none;
       }
 
       .nav a {
@@ -63,22 +95,19 @@
       #skills {
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
           background-color: white;
       }
 
       #contact {
         margin-top: 1.5em;
-        margin-bottom: 1.5em;
+        margin-bottom: 3em;
       }
 
 
     /* ---- Page Elements ---- */
 
-    p {
-        margin-left: 1.5em;
-        margin-right: 1.5em;
-    }
-    
     .name, a {
         color: black;
     }
@@ -86,21 +115,6 @@
     .name {
         font-family: 'Satisfy', cursive;
         color: #16a085;
-    }
-   
-    h2 {
-        margin-top: 3rem;
-        font-variant: small-caps;
-    }
-
-
-    h3 {
-        font-weight: 600;
-        font-size: 1.3em;
-    }
-
-    .section-heading {
-        margin-bottom: 2em;
     }
 
     #intro {
@@ -110,14 +124,6 @@
     #intro img {
         max-width: 70%;
         margin-top: 1em;
-    }
-    
-    img {
-        width: 90%;
-    }
-
-    li {
-        list-style: none;
     }
 
     .item {
@@ -134,13 +140,12 @@
         margin-left: 0.5em;
     }
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-        border-top: 1px solid lightgray;
-        margin: 0 0.5em;
-        color: black;
+    #bottom-nav-mobile p {
+        font-variant: small-caps;
+    }
+
+    #bottom-nav-tablet-desktop {
+        display: none;
     }
  
   /* =========================================
@@ -148,9 +153,101 @@
      ========================================= */   
 
      @media (min-width: 768px) {
+        #main-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            background-color: #d6eafb;
+        }
 
+        #intro {
+            display: flex;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        #intro img {
+            order: 1;
+            align-self: center;
+            max-width: 45%;
+        }
+
+        #intro p {
+            align-self: center;
+            flex-grow: 2;
+        }
+
+        #portfolio-list {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            max-height: 300vh;
+        }
+
+        .item {
+            max-width: 50%;
+        }
+
+        #contact {
+            margin-bottom: 4em;
+        }
+
+        .bottom-nav-mobile {
+            display: none;
+        }
+
+        footer {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+
+        #bottom-nav-tablet-desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            font-variant: small-caps;
+        }
+
+        #bottom-nav-tablet-desktop a {
+            text-decoration: none;
+            padding: 1em;
+        } 
      }
 
      @media (min-width: 1024px) {
+       nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #d6eafb;
+       }
 
+       #main-nav {
+           justify-content: flex-end;
+       }
+
+       h1 {
+           margin-left: 1em;
+       }
+
+       #intro {
+           font-size: 1.25em;
+       }
+
+       #portfolio-list {
+           max-height: 100vh;
+       }
+
+       .item {
+           max-width: 33%;
+       }
+
+       footer {
+           justify-content: space-between;
+           font-size: 1.1em;
+       }
      }
